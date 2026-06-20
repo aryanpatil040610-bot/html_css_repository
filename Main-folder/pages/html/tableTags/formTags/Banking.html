@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyBank</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f7fb;
+    }
+
+    header{
+      background:#0a3d62;
+      color:white;
+      padding:15px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin-left:20px;
+      font-weight:bold;
+    }
+
+    .hero{
+      padding:50px;
+      text-align:center;
+      background:linear-gradient(to right,#1e3799,#4a69bd);
+      color:white;
+    }
+
+    .container{
+      width:90%;
+      max-width:1000px;
+      margin:30px auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:20px;
+    }
+
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:12px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2{
+      margin-bottom:20px;
+      color:#0a3d62;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:8px;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      background:#1e3799;
+      color:white;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    button:hover{
+      background:#0c2461;
+    }
+
+    .balance{
+      font-size:40px;
+      color:green;
+      margin-top:20px;
+      text-align:center;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#0a3d62;
+      color:white;
+      margin-top:30px;
+    }
+
+    @media(max-width:768px){
+      .container{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>MyBank</h1>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Accounts</a>
+      <a href="#">Transfer</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to MyBank</h2>
+    <p>Secure Online Banking System</p>
+  </section>
+
+  <div class="container">
+
+    <!-- Login Section -->
+    <div class="card">
+      <h2>Login</h2>
+
+      <form>
+        <input type="text" placeholder="Enter Username" required>
+
+        <input type="password" placeholder="Enter Password" required>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <!-- Balance Section -->
+    <div class="card">
+      <h2>Account Balance</h2>
+
+      <p>Current Balance:</p>
+
+      <div class="balance">₹50,000</div>
+    </div>
+
+    <!-- Transfer Money -->
+    <div class="card">
+      <h2>Transfer Money</h2>
+
+      <form>
+        <input type="text" placeholder="Receiver Name" required>
+
+        <input type="number" placeholder="Amount" required>
+
+        <button type="submit">Transfer</button>
+      </form>
+    </div>
+
+    <!-- Transaction History -->
+    <div class="card">
+      <h2>Recent Transactions</h2>
+
+      <ul>
+        <li>₹2,000 Sent to Rahul</li>
+        <li>₹5,000 Received from Amit</li>
+        <li>₹1,200 Mobile Recharge</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 MyBank | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
